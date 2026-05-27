@@ -307,18 +307,18 @@ export default function Portfolio() {
   const events = [
     {
       id: 'bkk', wide: true,
-      title: 'Stark Space Bangkok 2024', tag: '7-Day Flagship Activation',
-      meta: 'Devcon Week · Bangkok · Nov 2024 · 10,000+ Attendees',
-      description: 'Seven-day flagship activation during Devcon week in Bangkok. Starting with the Hacker House then escalating into multi-format programming: developer workshops, VIP dinners, community parties, a yoga & sport experience, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
-      photos: ['/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/bangkok-lobby.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg', '/images/hackerhouse-bkk.jpg'],
+      title: 'Stark Space + Hacker House BKK 2024', tag: '7-Day Event &  Hacker House',
+      meta: 'Devcon Week · Bangkok · 2024 · 10,000+ Attendees',
+      description: 'Seven-day activation during Devcon week in Bangkok. Starting with the Hacker House then escalating into multi-format programming: developer workshops, VIP dinners, community parties, a yoga & sport experience, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
+      photos: ['/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/hackerhouse-bkk.jpg'],
       youtube: [{ id: 'kTbc6aMQWRM', label: 'Bangkok Hacker House — Official Recap' }],
       twitter: [{ url: 'https://twitter.com/_SDAV/status/1856586241858269497', label: 'Yoga Event (Community)' }],
       accent: '#9060e0', icon: '⬡',
     },
     {
       id: 'denver', wide: false,
-      title: 'StarkCity Denver + ETH Denver', tag: 'Flagship Conference Activation',
-      meta: 'ETH Denver · 2024 · Multiple Venues · 1,000+ Attendees',
+      title: 'StarkCity Denver + Hacker House + Side Events 2024 & 2025', tag: 'Flagship Conference, Side Events &  Hacker House',
+      meta: 'ETHDenver · 2024 · Marquee event',
       description: 'Large-scale activation at ETH Denver 2024 — multiple venues, speakers, sponsors, workshops, and community programming. Preceded by the Denver Hacker House, creating a full week of Starknet presence.',
       photos: ['/images/denver-gaming.jpg'],
       youtube: [
@@ -330,8 +330,8 @@ export default function Portfolio() {
     },
     {
       id: 'london', wide: false,
-      title: 'StarkCity London', tag: 'Conference Activation',
-      meta: 'London Blockchain Week · Multi-day · Starknet Foundation',
+      title: 'StarkCity London', tag: 'Flagship Conference',
+      meta: 'London Blockchain Week · 2024  · Marquee event',
       description: "Starknet's conference presence during London Blockchain Week — workshops, ecosystem panels, and community gatherings bringing together builders across the UK and Europe.",
       photos: [],
       youtube: [{ id: 'oF3D76e1mS0', label: 'StarkCity London — Official Recap' }],
@@ -340,15 +340,15 @@ export default function Portfolio() {
     },
     {
       id: 'istanbul', wide: false,
-      title: 'Hacker House Istanbul + StarknetCC', tag: 'Developer Experience & Conference',
+      title: 'Hacker House Istanbul + StarknetCC', tag: 'Hacker House,Side Events & Conference',
       meta: 'Devconnect 2023 · Istanbul · 200+ Developers Onboarded',
       description: 'Flagship Hacker House during Devconnect 2023. Onboarded 200+ developers into the Starknet ecosystem through hands-on workshops, mentorship, and collaborative building sessions. Followed by StarknetCC.',
       photos: [], youtube: [], twitter: [], accent: '#b070e8', icon: '⬣',
     },
     {
       id: 'brussels', wide: false,
-      title: 'Hacker House Brussels + StarknetCC', tag: 'Developer Experience & Conference',
-      meta: 'EthCC 2024 · Brussels · Starknet Foundation',
+      title: 'Hacker House Brussels + StarknetCC', tag: 'Hacker House,Side Events & Conference',
+      meta: 'EthCC 2024 · Brussels · Side Events',
       description: 'Multi-day Hacker House during EthCC in Brussels — connecting developers, builders, and ecosystem contributors through immersive programming and workshops. Followed by StarknetCC.',
       photos: ['/images/brussels-vip.jpg'], youtube: [], twitter: [], accent: '#60aad8', icon: '◆',
     },
@@ -362,8 +362,8 @@ export default function Portfolio() {
     },
     {
       id: 'berlin', wide: false,
-      title: 'Starknet VIP Events', tag: 'Executive Dinners & Rooftop Gatherings',
-      meta: 'Berlin · Brussels · Global · Curated Experiences',
+      title: 'Starknet VIP Events', tag: 'Executive Dinners & Gatherings',
+      meta: 'Global· High End Venues· Curated Experiences',
       description: 'Intimate executive dinners and exclusive rooftop gatherings for ecosystem leaders, investors, and core contributors — with the Berlin TV Tower as backdrop. White-glove hospitality instincts applied to Web3.',
       photos: ['/images/berlin-rooftop.jpg', '/images/berlin-flowers.jpg'],
       youtube: [], twitter: [], accent: '#d4a860', icon: '◆',
@@ -371,7 +371,7 @@ export default function Portfolio() {
     {
       id: 'meetups', wide: false,
       title: 'Global Meetup Network', tag: 'Community at Scale',
-      meta: '40+ Cities · Worldwide · 2023–2024',
+      meta: '40+ Cities · Worldwide · Community and Devs',
       description: 'Scaled and managed a global community meetup program across 40+ cities worldwide. Established local event templates, recruited organizers, and delivered consistent brand experiences globally — including the first Vienna Starknet meetup.',
       photos: [], youtube: [],
       twitter: [{ url: 'https://twitter.com/Gurk_TV/status/1707447442969342453', label: 'Vienna Meetup — Kickoff' }],
@@ -415,13 +415,13 @@ export default function Portfolio() {
   const traits = ['Calm under pressure', 'Culturally adaptable', 'High taste level', 'Analytically sharp', 'Creatively driven', 'Relationship-first', 'Detail obsessed', 'Globally minded', 'Resilient', 'Game-theorist strategist'];
 
   const timeline = [
-    { year: '2016–18', role: 'Luxury Hospitality & VIP Operations', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel. Built impeccable white-glove service standards and VIP guest operations at the highest level." },
-    { year: '2018–19', role: 'Premium Events & Luxury Catering', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
+    { year: '2016–18', role: 'Apprenticeship - F&B', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel (Top 50 Globally). Built impeccable white-glove service standards and VIP guest operations at the highest level." },
+    { year: '2018–19', role: 'Chef De Rang', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
     { year: '2019–20', role: 'VIP Guest Relations', org: 'Hotel Bristol Vienna', type: 'Hospitality', color: T.gold, body: 'Leading five-star Starwood property. Refined white-glove protocols, senior executive hospitality, personalized bespoke service at scale.' },
     { year: '2020–21', role: 'VIP Matchday Operations', org: 'Allianz Arena München', type: 'Hospitality', color: T.gold, body: "Premium matchday VIP operations at one of Europe's most iconic sports venues — serving executives, sponsors, and high-profile clients." },
     { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', type: 'Finance', color: '#7ab4d4', body: 'Institutional brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments.' },
-    { year: '2022–23', role: 'Ecosystem & Events Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led community growth and event programming in the early Web3 space, scaling developer and founder engagement through curated in-person experiences.' },
-    { year: '2023–Now', role: 'Global Events & Hacker House Program', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Delivered StarknetCC, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
+    { year: '2022–23', role: 'Social Media Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led community growth and event programming in the early Web3 space, scaling developer and founder engagement through curated in-person experiences.' },
+    { year: '2023–25', role: 'Global Events & Hacker House Program', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Delivered StarknetCC, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
   ];
 
   const activeEvent = events.find(e => e.id === activeId);
