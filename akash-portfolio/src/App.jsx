@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 
+// If you clean up the nested folder later, change this ONE line to '/images'
+const IMG = '/images/images';
+
 const T = {
   bg: '#060606', bg1: '#0d0d0d',
   text: '#f0ede6', stone: '#b8b0a4',
@@ -304,7 +307,7 @@ export default function Portfolio() {
       title: 'Stark Space Bangkok 2024', tag: '7-Day Flagship Activation',
       meta: 'Devcon Week · Bangkok · Nov 2024 · 10,000+ Attendees',
       description: 'Seven-day flagship activation during Devcon week in Bangkok. Hacker House, developer workshops, VIP dinners, community parties, yoga & sport experiences, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
-      photos: ['/images/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/bangkok-lobby.jpg', '/images/bangkok-cafe.jpg', '/images/images/bangkok-rooftop-party.jpg', '/images/bangkok-team.jpg', '/images/hackerhouse-bkk.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
+      photos: [`${IMG}/bangkok-entrance.jpg`, `${IMG}/bangkok-tunnel.jpg`, `${IMG}/bangkok-lobby.jpg`, `${IMG}/bangkok-cafe.jpg`, `${IMG}/bangkok-rooftop-party.jpg`, `${IMG}/bangkok-team.jpg`, `${IMG}/hackerhouse-bkk.jpg`, `${IMG}/bangkok-merch.jpg`, `${IMG}/bangkok-swag.jpg`],
       youtube: [{ id: 'kTbc6aMQWRM', label: 'Bangkok Hacker House — Official Recap' }],
       twitter: [{ url: 'https://twitter.com/_SDAV/status/1856586241858269497', label: 'Yoga Event (Community)' }],
       accent: '#9060e0', icon: '⬡',
@@ -314,7 +317,7 @@ export default function Portfolio() {
       title: 'StarkCity Denver + ETH Denver', tag: 'Flagship Conference Activation',
       meta: 'ETH Denver · 2024 · Multiple Venues · 1,000+ Attendees',
       description: 'Large-scale activation at ETH Denver 2024 — multiple venues, speakers, sponsors, workshops, and community programming. Preceded by the Denver Hacker House.',
-      photos: ['/images/denver-gaming.jpg'],
+      photos: [`${IMG}/denver-gaming.jpg`],
       youtube: [
         { id: 'rPJwyUlp2ik', label: 'StarkCity Denver — Conference Recap' },
         { id: '6Njz6Ppk1mI', label: 'Denver Hacker House 2025 — Post Movie' },
@@ -327,7 +330,7 @@ export default function Portfolio() {
       title: 'StarkCity London', tag: 'Conference Activation',
       meta: 'London Blockchain Week · Multi-day · Starknet Foundation',
       description: "Starknet's conference presence during London Blockchain Week — workshops, ecosystem panels, and community gatherings bringing together builders across the UK and Europe.",
-      photos: ['/images/london-talk.jpg', '/images/london-crowd.jpg'],
+      photos: [`${IMG}/london-talk.jpg`, `${IMG}/london-crowd.jpg`],
       youtube: [{ id: 'oF3D76e1mS0', label: 'StarkCity London — Official Recap' }],
       twitter: [],
       accent: '#42c492', icon: '◇',
@@ -336,8 +339,8 @@ export default function Portfolio() {
       id: 'istanbul', wide: false,
       title: 'Hacker House Istanbul + StarknetCC', tag: 'Developer Experience & Conference',
       meta: 'Devconnect 2023 · Istanbul · 200+ Developers Onboarded',
-      description: 'Flagship Hacker House during Devconnect 2023. Onboarded 200+ developers into the Starknet ecosystem through hands-on workshops, mentorship, and collaborative building sessions. Followed by StarknetCC — the ecosystem\'s own conference.',
-      photos: ['/images/istanbul-hackerhouse.jpg'],
+      description: 'Flagship Hacker House during Devconnect 2023. Onboarded 200+ developers into the Starknet ecosystem through hands-on workshops, mentorship, and collaborative building sessions. Followed by StarknetCC.',
+      photos: [`${IMG}/istanbul-hackerhouse.jpg`],
       youtube: [],
       twitter: [
         { url: 'https://twitter.com/StarknetFndn/status/1731617290737905837', label: 'Hacker House Istanbul' },
@@ -350,7 +353,7 @@ export default function Portfolio() {
       title: 'Hacker House Brussels + StarknetCC', tag: 'Developer Experience & Conference',
       meta: 'EthCC 2024 · Brussels · Starknet Foundation',
       description: 'Multi-day Hacker House during EthCC in Brussels — connecting developers, builders, and ecosystem contributors through immersive programming and workshops. Followed by StarknetCC.',
-      photos: ['/images/brussels-hackerhouse.jpg', '/images/brussels-workshop.jpg', '/images/brussels-vip.jpg'],
+      photos: [`${IMG}/brussels-hackerhouse.jpg`, `${IMG}/brussels-workshop.jpg`, `${IMG}/brussels-vip.jpg`],
       youtube: [], twitter: [], accent: '#60aad8', icon: '◆',
     },
     {
@@ -358,23 +361,23 @@ export default function Portfolio() {
       title: 'Stark Space Seoul 2024', tag: 'Hacker House & Community',
       meta: 'Korea Blockchain Week · Seoul · 2024',
       description: 'Community-focused Hacker House during Korea Blockchain Week — bringing together Starknet developers, founders, and ecosystem partners for immersive collaboration. Featured creative activations including a custom Stark Space claw machine.',
-      photos: ['/images/seoul-bar.jpg', '/images/seoul-collage.jpg', '/images/seoul-claw.jpg'],
+      photos: [`${IMG}/seoul-bar.jpg`, `${IMG}/seoul-collage.jpg`, `${IMG}/seoul-claw.jpg`],
       youtube: [], twitter: [], accent: '#42c4d4', icon: '◈',
     },
     {
       id: 'berlin', wide: false,
       title: 'Starknet VIP Events', tag: 'Executive Dinners & Rooftop Gatherings',
       meta: 'Berlin · Brussels · Global · Curated Experiences',
-      description: 'Intimate executive dinners and exclusive rooftop gatherings for ecosystem leaders, investors, and core contributors — with the Berlin TV Tower as backdrop. White-glove hospitality instincts applied to Web3.',
-      photos: ['/images/berlin-rooftop-sunset.jpg', '/images/berlin-rooftop.jpg', '/images/berlin-flowers.jpg', '/images/berlin-women.jpg', '/images/vip-dinner.jpg', /images/im/bangkok-rooftop-party.jpg'],
+      description: 'Intimate executive dinners and exclusive rooftop gatherings for ecosystem leaders, investors, and core contributors — with the Berlin TV Tower as backdrop.',
+      photos: [`${IMG}/berlin-rooftop-sunset.jpg`, `${IMG}/berlin-rooftop.jpg`, `${IMG}/berlin-flowers.jpg`, `${IMG}/berlin-women.jpg`, `${IMG}/vip-dinner.jpg`],
       youtube: [], twitter: [], accent: '#d4a860', icon: '◆',
     },
     {
       id: 'meetups', wide: false,
       title: 'Global Meetup Network', tag: 'Community at Scale',
       meta: '40+ Cities · Worldwide · 2023–2024',
-      description: 'Scaled and managed a global community meetup program across 40+ cities worldwide. From Berlin to Africa, established local event templates, recruited organizers, and delivered consistent brand experiences globally — including the first Vienna Starknet meetup.',
-      photos: ['/images/meetup-berlin-talk.jpg', '/images/meetup-conference.jpg', '/images/meetup-africa-talk.jpg', '/images/meetup-africa-group.jpg'],
+      description: 'Scaled and managed a global community meetup program across 40+ cities worldwide. From Berlin to Africa, established local event templates, recruited organizers, and delivered consistent brand experiences globally.',
+      photos: [`${IMG}/meetup-berlin-talk.jpg`, `${IMG}/meetup-conference.jpg`, `${IMG}/meetup-africa-talk.jpg`, `${IMG}/meetup-africa-group.jpg`],
       youtube: [],
       twitter: [{ url: 'https://twitter.com/Gurk_TV/status/1707447442969342453', label: 'Vienna Meetup — Kickoff' }],
       accent: '#d4a840', icon: '◉',
@@ -384,7 +387,7 @@ export default function Portfolio() {
       title: 'Branded Merchandise Program', tag: 'Brand Activation',
       meta: '15,000+ Items · Globally Curated & Delivered',
       description: 'Designed, sourced, and delivered 15,000+ branded merchandise items across global events. From custom incense sticks in Bangkok to a branded claw machine in Seoul — every item a deliberate brand touchpoint.',
-      photos: ['/images/merch-hoodie.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
+      photos: [`${IMG}/merch-hoodie.jpg`, `${IMG}/bangkok-merch.jpg`, `${IMG}/bangkok-swag.jpg`],
       youtube: [],
       twitter: [{ url: 'https://twitter.com/ChadWestTweets/status/1855849509412389121', label: 'Merch (Community Reaction)' }],
       accent: '#e06a6a', icon: '◈',
@@ -468,7 +471,7 @@ export default function Portfolio() {
           </div>
           <div className="d-none" style={{ flexShrink: 0, animation: 'heroIn .85s .22s ease both', position: 'relative' }}>
             <div style={{ width: 'clamp(300px,28vw,420px)', height: 'clamp(360px,33vw,500px)', borderRadius: '12px', overflow: 'hidden', border: '1.5px solid rgba(196,160,100,.28)', boxShadow: '0 0 0 8px rgba(196,160,100,.04), 0 30px 80px rgba(0,0,0,.7), 0 0 60px rgba(196,160,100,.1)', position: 'relative', zIndex: 2, background: '#0d0d0d' }}>
-              <img src="/images/sofa.jpg" alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={`${IMG}/sofa.jpg`} alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '60%', background: 'linear-gradient(to top, rgba(6,6,6,.85), transparent)', pointerEvents: 'none' }} />
               <div style={{ position: 'absolute', bottom: '20px', left: '20px', right: '20px' }}>
                 <div style={{ color: T.gold, fontSize: '9px', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '4px', fontWeight: 600 }}>The Strategist</div>
@@ -582,7 +585,7 @@ export default function Portfolio() {
           <Reveal>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
               <div style={{ width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', border: '1.5px solid rgba(196,160,100,.32)', boxShadow: '0 0 0 8px rgba(196,160,100,.04), 0 0 40px rgba(196,160,100,.18), 0 20px 50px rgba(0,0,0,.5)', background: '#0d0d0d' }}>
-                <img src="/images/images/Akash_Headshot.jpg" alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={`${IMG}/Akash_Headshot.jpg`} alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
             <p style={sLabel}>The Person Behind the Work</p>
@@ -649,7 +652,8 @@ export default function Portfolio() {
           </Reveal>
           <Reveal delay={.1}>
             <h2 style={{ ...sH2, fontSize: 'clamp(30px,6vw,64px)', marginBottom: '24px' }}>
-              Let's build the next room<br /><em style={{ fontStyle: 'italic', fontFamily: "'Cormorant Garamond',serif", fontWeight: 300, ...gold }}>people talk about.</em>
+              Perception fades. Reality remains.<br />
+              <em style={{ fontStyle: 'italic', fontFamily: "'Cormorant Garamond',serif", fontWeight: 300, ...gold }}>Let's build what lasts.</em>
             </h2>
           </Reveal>
           <Reveal delay={.18}>
