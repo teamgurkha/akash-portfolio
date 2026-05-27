@@ -75,13 +75,7 @@ function YouTubeEmbed({ id, label }) {
     <div>
       {label && <p style={{ color: T.gold, fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '8px', fontFamily: "'Space Grotesk',sans-serif" }}>{label}</p>}
       <div style={{ borderRadius: '12px', overflow: 'hidden', aspectRatio: '16/9', background: '#000' }}>
-        <iframe
-          src={`https://www.youtube.com/embed/${id}`}
-          style={{ width: '100%', height: '100%', border: 'none' }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title={label || id}
-        />
+        <iframe src={`https://www.youtube.com/embed/${id}`} style={{ width: '100%', height: '100%', border: 'none' }} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title={label || id} />
       </div>
     </div>
   );
@@ -197,12 +191,10 @@ export default function Portfolio() {
       tw.charset = 'utf-8';
       document.body.appendChild(tw);
     }
-
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap';
     document.head.appendChild(link);
-
     const style = document.createElement('style');
     style.textContent = `
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -235,6 +227,8 @@ export default function Portfolio() {
       .sk-cell:hover { background: rgba(196,160,100,.05) !important; }
       .trait { transition: all .24s; cursor: default; }
       .trait:hover { background: rgba(196,160,100,.1) !important; border-color: rgba(196,160,100,.42) !important; }
+      .social-icon { width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(196,160,100,.3); background: rgba(196,160,100,.05); display: flex; align-items: center; justify-content: center; color: #c4a064; transition: all .28s; text-decoration: none; }
+      .social-icon:hover { background: rgba(196,160,100,.18); border-color: rgba(196,160,100,.6); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(196,160,100,.2); }
       @media (max-width: 860px) {
         .d-none { display: none !important; }
         .hero-wrap { flex-direction: column !important; gap: 36px !important; }
@@ -307,19 +301,19 @@ export default function Portfolio() {
   const events = [
     {
       id: 'bkk', wide: true,
-      title: 'Stark Space + Hacker House BKK 2024', tag: '7-Day Event &  Hacker House',
-      meta: 'Devcon Week · Bangkok · 2024 · 10,000+ Attendees',
-      description: 'Seven-day activation during Devcon week in Bangkok. Starting with the Hacker House then escalating into multi-format programming: developer workshops, VIP dinners, community parties, a yoga & sport experience, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
-      photos: ['/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/hackerhouse-bkk.jpg'],
+      title: 'Stark Space Bangkok 2024', tag: '7-Day Flagship Activation',
+      meta: 'Devcon Week · Bangkok · Nov 2024 · 10,000+ Attendees',
+      description: 'Seven-day flagship activation during Devcon week in Bangkok. Hacker House, developer workshops, VIP dinners, community parties, yoga & sport experiences, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
+      photos: ['/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/bangkok-lobby.jpg', '/images/bangkok-cafe.jpg', '/images/bangkok-rooftop-party.jpg', '/images/bangkok-team.jpg', '/images/hackerhouse-bkk.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
       youtube: [{ id: 'kTbc6aMQWRM', label: 'Bangkok Hacker House — Official Recap' }],
       twitter: [{ url: 'https://twitter.com/_SDAV/status/1856586241858269497', label: 'Yoga Event (Community)' }],
       accent: '#9060e0', icon: '⬡',
     },
     {
       id: 'denver', wide: false,
-      title: 'StarkCity Denver + Hacker House + Side Events 2024 & 2025', tag: 'Flagship Conference, Side Events &  Hacker House',
-      meta: 'ETHDenver · 2024 · Marquee event',
-      description: 'Large-scale activation at ETH Denver 2024 — multiple venues, speakers, sponsors, workshops, and community programming. Preceded by the Denver Hacker House, creating a full week of Starknet presence.',
+      title: 'StarkCity Denver + ETH Denver', tag: 'Flagship Conference Activation',
+      meta: 'ETH Denver · 2024 · Multiple Venues · 1,000+ Attendees',
+      description: 'Large-scale activation at ETH Denver 2024 — multiple venues, speakers, sponsors, workshops, and community programming. Preceded by the Denver Hacker House.',
       photos: ['/images/denver-gaming.jpg'],
       youtube: [
         { id: 'rPJwyUlp2ik', label: 'StarkCity Denver — Conference Recap' },
@@ -330,50 +324,58 @@ export default function Portfolio() {
     },
     {
       id: 'london', wide: false,
-      title: 'StarkCity London', tag: 'Flagship Conference',
-      meta: 'London Blockchain Week · 2024  · Marquee event',
+      title: 'StarkCity London', tag: 'Conference Activation',
+      meta: 'London Blockchain Week · Multi-day · Starknet Foundation',
       description: "Starknet's conference presence during London Blockchain Week — workshops, ecosystem panels, and community gatherings bringing together builders across the UK and Europe.",
-      photos: [],
+      photos: ['/images/london-talk.jpg', '/images/london-crowd.jpg'],
       youtube: [{ id: 'oF3D76e1mS0', label: 'StarkCity London — Official Recap' }],
       twitter: [],
       accent: '#42c492', icon: '◇',
     },
     {
       id: 'istanbul', wide: false,
-      title: 'Hacker House Istanbul + StarknetCC', tag: 'Hacker House,Side Events & Conference',
+      title: 'Hacker House Istanbul + StarknetCC', tag: 'Developer Experience & Conference',
       meta: 'Devconnect 2023 · Istanbul · 200+ Developers Onboarded',
-      description: 'Flagship Hacker House during Devconnect 2023. Onboarded 200+ developers into the Starknet ecosystem through hands-on workshops, mentorship, and collaborative building sessions. Followed by StarknetCC.',
-      photos: [], youtube: [], twitter: [], accent: '#b070e8', icon: '⬣',
+      description: 'Flagship Hacker House during Devconnect 2023. Onboarded 200+ developers into the Starknet ecosystem through hands-on workshops, mentorship, and collaborative building sessions. Followed by StarknetCC — the ecosystem\'s own conference.',
+      photos: ['/images/istanbul-hackerhouse.jpg'],
+      youtube: [],
+      twitter: [
+        { url: 'https://twitter.com/StarknetFndn/status/1731617290737905837', label: 'Hacker House Istanbul' },
+        { url: 'https://twitter.com/Gurk_TV/status/1723967567591612647', label: 'StarknetCC Istanbul — Conference' },
+      ],
+      accent: '#b070e8', icon: '⬣',
     },
     {
       id: 'brussels', wide: false,
-      title: 'Hacker House Brussels + StarknetCC', tag: 'Hacker House,Side Events & Conference',
-      meta: 'EthCC 2024 · Brussels · Side Events',
+      title: 'Hacker House Brussels + StarknetCC', tag: 'Developer Experience & Conference',
+      meta: 'EthCC 2024 · Brussels · Starknet Foundation',
       description: 'Multi-day Hacker House during EthCC in Brussels — connecting developers, builders, and ecosystem contributors through immersive programming and workshops. Followed by StarknetCC.',
-      photos: ['/images/brussels-vip.jpg'], youtube: [], twitter: [], accent: '#60aad8', icon: '◆',
+      photos: ['/images/brussels-hackerhouse.jpg', '/images/brussels-workshop.jpg', '/images/brussels-vip.jpg'],
+      youtube: [], twitter: [], accent: '#60aad8', icon: '◆',
     },
     {
       id: 'seoul', wide: false,
       title: 'Stark Space Seoul 2024', tag: 'Hacker House & Community',
       meta: 'Korea Blockchain Week · Seoul · 2024',
       description: 'Community-focused Hacker House during Korea Blockchain Week — bringing together Starknet developers, founders, and ecosystem partners for immersive collaboration. Featured creative activations including a custom Stark Space claw machine.',
-      photos: ['/images/seoul-bar.jpg', '/images/seoul-claw.jpg'],
+      photos: ['/images/seoul-bar.jpg', '/images/seoul-collage.jpg', '/images/seoul-claw.jpg'],
       youtube: [], twitter: [], accent: '#42c4d4', icon: '◈',
     },
     {
       id: 'berlin', wide: false,
-      title: 'Starknet VIP Events', tag: 'Executive Dinners & Gatherings',
-      meta: 'Global· High End Venues· Curated Experiences',
+      title: 'Starknet VIP Events', tag: 'Executive Dinners & Rooftop Gatherings',
+      meta: 'Berlin · Brussels · Global · Curated Experiences',
       description: 'Intimate executive dinners and exclusive rooftop gatherings for ecosystem leaders, investors, and core contributors — with the Berlin TV Tower as backdrop. White-glove hospitality instincts applied to Web3.',
-      photos: ['/images/berlin-rooftop.jpg', '/images/berlin-flowers.jpg'],
+      photos: ['/images/berlin-rooftop-sunset.jpg', '/images/berlin-rooftop.jpg', '/images/berlin-flowers.jpg', '/images/berlin-women.jpg', '/images/vip-dinner.jpg'],
       youtube: [], twitter: [], accent: '#d4a860', icon: '◆',
     },
     {
       id: 'meetups', wide: false,
       title: 'Global Meetup Network', tag: 'Community at Scale',
-      meta: '40+ Cities · Worldwide · Community and Devs',
-      description: 'Scaled and managed a global community meetup program across 40+ cities worldwide. Established local event templates, recruited organizers, and delivered consistent brand experiences globally — including the first Vienna Starknet meetup.',
-      photos: [], youtube: [],
+      meta: '40+ Cities · Worldwide · 2023–2024',
+      description: 'Scaled and managed a global community meetup program across 40+ cities worldwide. From Berlin to Africa, established local event templates, recruited organizers, and delivered consistent brand experiences globally — including the first Vienna Starknet meetup.',
+      photos: ['/images/meetup-berlin-talk.jpg', '/images/meetup-conference.jpg', '/images/meetup-africa-talk.jpg', '/images/meetup-africa-group.jpg'],
+      youtube: [],
       twitter: [{ url: 'https://twitter.com/Gurk_TV/status/1707447442969342453', label: 'Vienna Meetup — Kickoff' }],
       accent: '#d4a840', icon: '◉',
     },
@@ -382,7 +384,7 @@ export default function Portfolio() {
       title: 'Branded Merchandise Program', tag: 'Brand Activation',
       meta: '15,000+ Items · Globally Curated & Delivered',
       description: 'Designed, sourced, and delivered 15,000+ branded merchandise items across global events. From custom incense sticks in Bangkok to a branded claw machine in Seoul — every item a deliberate brand touchpoint.',
-      photos: ['/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
+      photos: ['/images/merch-hoodie.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
       youtube: [],
       twitter: [{ url: 'https://twitter.com/ChadWestTweets/status/1855849509412389121', label: 'Merch (Community Reaction)' }],
       accent: '#e06a6a', icon: '◈',
@@ -415,13 +417,13 @@ export default function Portfolio() {
   const traits = ['Calm under pressure', 'Culturally adaptable', 'High taste level', 'Analytically sharp', 'Creatively driven', 'Relationship-first', 'Detail obsessed', 'Globally minded', 'Resilient', 'Game-theorist strategist'];
 
   const timeline = [
-    { year: '2016–18', role: 'Apprenticeship - F&B', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel (Top 50 Globally). Built impeccable white-glove service standards and VIP guest operations at the highest level." },
-    { year: '2018–19', role: 'Chef De Rang', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
+    { year: '2016–18', role: 'Luxury Hospitality & VIP Operations', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel. Built impeccable white-glove service standards and VIP guest operations at the highest level." },
+    { year: '2018–19', role: 'Premium Events & Luxury Catering', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
     { year: '2019–20', role: 'VIP Guest Relations', org: 'Hotel Bristol Vienna', type: 'Hospitality', color: T.gold, body: 'Leading five-star Starwood property. Refined white-glove protocols, senior executive hospitality, personalized bespoke service at scale.' },
     { year: '2020–21', role: 'VIP Matchday Operations', org: 'Allianz Arena München', type: 'Hospitality', color: T.gold, body: "Premium matchday VIP operations at one of Europe's most iconic sports venues — serving executives, sponsors, and high-profile clients." },
     { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', type: 'Finance', color: '#7ab4d4', body: 'Institutional brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments.' },
-    { year: '2022–23', role: 'Social Media Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led community growth and event programming in the early Web3 space, scaling developer and founder engagement through curated in-person experiences.' },
-    { year: '2023–25', role: 'Global Events & Hacker House Program', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Delivered StarknetCC, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
+    { year: '2022–23', role: 'Ecosystem & Events Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led community growth and event programming in the early Web3 space, scaling developer and founder engagement through curated in-person experiences.' },
+    { year: '2023–Now', role: 'Global Events & Hacker House Program', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Delivered StarknetCC, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
   ];
 
   const activeEvent = events.find(e => e.id === activeId);
@@ -578,6 +580,11 @@ export default function Portfolio() {
       <section style={{ ...sP, position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
           <Reveal>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
+              <div style={{ width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', border: '1.5px solid rgba(196,160,100,.32)', boxShadow: '0 0 0 8px rgba(196,160,100,.04), 0 0 40px rgba(196,160,100,.18), 0 20px 50px rgba(0,0,0,.5)', background: '#0d0d0d' }}>
+                <img src="/images/Akash_Headshot.jpg" alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+            </div>
             <p style={sLabel}>The Person Behind the Work</p>
           </Reveal>
           <Reveal delay={.1}>
@@ -646,11 +653,17 @@ export default function Portfolio() {
             </h2>
           </Reveal>
           <Reveal delay={.18}>
-            <p style={{ color: T.stone, fontSize: '16px', fontWeight: 300, lineHeight: 1.78, marginBottom: '56px' }}>Available for event strategy, experiential marketing, community, partnerships, and global operations roles worldwide.</p>
+            <p style={{ color: T.stone, fontSize: '16px', fontWeight: 300, lineHeight: 1.78, marginBottom: '48px' }}>Available for event strategy, experiential marketing, community, partnerships, and global operations roles worldwide.</p>
           </Reveal>
           <Reveal delay={.26}>
-            <div style={{ background: T.card, border: `1px solid ${T.borderGold}`, borderRadius: '14px', padding: 'clamp(28px,4vw,48px)', marginBottom: '40px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))', gap: '28px' }}>
-              {[['Name', 'Akash Schweiger'], ['Location', 'Salzburg, Austria'], ['Email', 'Crypto_Gurkha@Proton.me'], ['Languages', 'German · English · Nepali']].map(([l, v]) => (
+            <div style={{ background: T.card, border: `1px solid ${T.borderGold}`, borderRadius: '14px', padding: 'clamp(28px,4vw,48px)', marginBottom: '32px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))', gap: '28px' }}>
+              {[
+                ['Name', 'Akash Schweiger'],
+                ['Location', 'Salzburg, Austria'],
+                ['Email', 'Crypto_Gurkha@Proton.me'],
+                ['Telegram', '@crypto_gurkha'],
+                ['Languages', 'German · English · Nepali'],
+              ].map(([l, v]) => (
                 <div key={l} style={{ textAlign: 'center' }}>
                   <div style={{ color: T.gold, fontSize: '9.5px', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '9px' }}>{l}</div>
                   <div style={{ color: T.text, fontSize: '13.5px', fontWeight: 300 }}>{v}</div>
@@ -658,7 +671,20 @@ export default function Portfolio() {
               ))}
             </div>
           </Reveal>
-          <Reveal delay={.34}>
+          <Reveal delay={.3}>
+            <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', marginBottom: '32px' }}>
+              <a href="mailto:Crypto_Gurkha@Proton.me" className="social-icon" title="Email" aria-label="Email">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+              <a href="https://t.me/crypto_gurkha" target="_blank" rel="noopener noreferrer" className="social-icon" title="Telegram: @crypto_gurkha" aria-label="Telegram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.27 1.4.18 1.12 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.11-3.03-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+              </a>
+              <a href="https://x.com/Gurk_TV" target="_blank" rel="noopener noreferrer" className="social-icon" title="X: @Gurk_TV" aria-label="X / Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={.36}>
             <a href="mailto:Crypto_Gurkha@Proton.me" className="btn-gold" style={{ display: 'inline-block', padding: '17px 50px', borderRadius: '3px', color: '#fff', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600, textDecoration: 'none' }}>Send a Message →</a>
           </Reveal>
         </div>
@@ -667,7 +693,15 @@ export default function Portfolio() {
       <footer style={{ borderTop: `1px solid ${T.border}`, padding: '26px clamp(22px,5vw,80px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '14px' }}>
         <span style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: '17px' }}>Akash <span style={{ color: T.gold }}>Schweiger</span></span>
         <span style={{ color: T.stone, fontSize: '11px', letterSpacing: '1px' }}>Global Event Strategist · Salzburg, Austria · {new Date().getFullYear()}</span>
-        <a href="mailto:Crypto_Gurkha@Proton.me" style={{ color: T.stone, fontSize: '12px', textDecoration: 'none' }}>Crypto_Gurkha@Proton.me</a>
+        <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+          <a href="https://x.com/Gurk_TV" target="_blank" rel="noopener noreferrer" style={{ color: T.stone, transition: 'color .25s' }} title="X" onMouseOver={e => e.currentTarget.style.color = T.gold} onMouseOut={e => e.currentTarget.style.color = T.stone}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+          </a>
+          <a href="https://t.me/crypto_gurkha" target="_blank" rel="noopener noreferrer" style={{ color: T.stone, transition: 'color .25s' }} title="Telegram" onMouseOver={e => e.currentTarget.style.color = T.gold} onMouseOut={e => e.currentTarget.style.color = T.stone}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.27 1.4.18 1.12 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.11-3.03-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          </a>
+          <a href="mailto:Crypto_Gurkha@Proton.me" style={{ color: T.stone, fontSize: '12px', textDecoration: 'none', transition: 'color .25s' }} onMouseOver={e => e.currentTarget.style.color = T.gold} onMouseOut={e => e.currentTarget.style.color = T.stone}>Crypto_Gurkha@Proton.me</a>
+        </div>
       </footer>
     </div>
   );
