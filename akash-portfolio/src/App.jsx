@@ -304,7 +304,7 @@ export default function Portfolio() {
       title: 'Stark Space Bangkok 2024', tag: '7-Day Flagship Activation',
       meta: 'Devcon Week · Bangkok · Nov 2024 · 10,000+ Attendees',
       description: 'Seven-day flagship activation during Devcon week in Bangkok. Hacker House, developer workshops, VIP dinners, community parties, yoga & sport experiences, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
-      photos: ['/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/bangkok-lobby.jpg', '/images/bangkok-cafe.jpg', '/images/bangkok-rooftop-party.jpg', '/images/bangkok-team.jpg', '/images/hackerhouse-bkk.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
+      photos: ['/images/images/bangkok-entrance.jpg', '/images/bangkok-tunnel.jpg', '/images/bangkok-lobby.jpg', '/images/bangkok-cafe.jpg', '/images/images/bangkok-rooftop-party.jpg', '/images/bangkok-team.jpg', '/images/hackerhouse-bkk.jpg', '/images/bangkok-merch.jpg', '/images/bangkok-swag.jpg'],
       youtube: [{ id: 'kTbc6aMQWRM', label: 'Bangkok Hacker House — Official Recap' }],
       twitter: [{ url: 'https://twitter.com/_SDAV/status/1856586241858269497', label: 'Yoga Event (Community)' }],
       accent: '#9060e0', icon: '⬡',
@@ -366,7 +366,7 @@ export default function Portfolio() {
       title: 'Starknet VIP Events', tag: 'Executive Dinners & Rooftop Gatherings',
       meta: 'Berlin · Brussels · Global · Curated Experiences',
       description: 'Intimate executive dinners and exclusive rooftop gatherings for ecosystem leaders, investors, and core contributors — with the Berlin TV Tower as backdrop. White-glove hospitality instincts applied to Web3.',
-      photos: ['/images/berlin-rooftop-sunset.jpg', '/images/berlin-rooftop.jpg', '/images/berlin-flowers.jpg', '/images/berlin-women.jpg', '/images/vip-dinner.jpg'],
+      photos: ['/images/berlin-rooftop-sunset.jpg', '/images/berlin-rooftop.jpg', '/images/berlin-flowers.jpg', '/images/berlin-women.jpg', '/images/vip-dinner.jpg', /images/im/bangkok-rooftop-party.jpg'],
       youtube: [], twitter: [], accent: '#d4a860', icon: '◆',
     },
     {
@@ -582,7 +582,7 @@ export default function Portfolio() {
           <Reveal>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
               <div style={{ width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', border: '1.5px solid rgba(196,160,100,.32)', boxShadow: '0 0 0 8px rgba(196,160,100,.04), 0 0 40px rgba(196,160,100,.18), 0 20px 50px rgba(0,0,0,.5)', background: '#0d0d0d' }}>
-                <img src="/images/Akash_Headshot.jpg" alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/images/Akash_Headshot.jpg" alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
             <p style={sLabel}>The Person Behind the Work</p>
