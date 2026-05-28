@@ -428,13 +428,13 @@ export default function Portfolio() {
   const traits = ['Calm under pressure', 'Culturally adaptable', 'High taste level', 'Analytically sharp', 'Creatively driven', 'Relationship-first', 'Detail obsessed', 'Globally minded', 'Resilient', 'Game-theorist strategist'];
 
   const timeline = [
-    { year: '2016–18', role: 'Luxury Hospitality & VIP Operations', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel. Built impeccable white-glove service standards and VIP guest operations at the highest level." },
+    { year: '2016–18', role: 'Apprenticeship', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel (Top 50 hotels globally). Built impeccable white-glove service standards and VIP guest operations at the highest level." },
     { year: '2018–19', role: 'Premium Events & Luxury Catering', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
     { year: '2019–20', role: 'VIP Guest Relations', org: 'Hotel Bristol Vienna', type: 'Hospitality', color: T.gold, body: 'Leading five-star Starwood property. Refined white-glove protocols, senior executive hospitality, personalized bespoke service at scale.' },
     { year: '2020–21', role: 'VIP Matchday Operations', org: 'Allianz Arena München', type: 'Hospitality', color: T.gold, body: "Premium matchday VIP operations at one of Europe's most iconic sports venues — serving executives, sponsors, and high-profile clients." },
-    { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', type: 'Finance', color: '#7ab4d4', body: 'Institutional brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments.' },
-    { year: '2022–23', role: 'Ecosystem & Events Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led community growth and event programming in the early Web3 space, scaling developer and founder engagement through curated in-person experiences.' },
-    { year: '2023–Now', role: 'Global Events & Hacker House Program', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Delivered StarknetCC, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
+    { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', type: 'Finance', color: '#7ab4d4', body: "Austria's largest broker with €8B AUM. Brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments." },
+    { year: '2022–23', role: 'Social Media Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led social media, community growth, and event programming in the early Web3 space, scaling developer and founder engagement through content and curated in-person experiences.' },
+    { year: '2023–Now', role: 'Global Events', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Supported StarknetCC and conference booth management, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
   ];
 
   const activeEvent = events.find(e => e.id === activeId);
