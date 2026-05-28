@@ -431,13 +431,13 @@ export default function Portfolio() {
   const traits = ['Calm under pressure', 'Culturally adaptable', 'High taste level', 'Analytically sharp', 'Creatively driven', 'Relationship-first', 'Detail obsessed', 'Globally minded', 'Resilient', 'Game-theorist strategist'];
 
   const timeline = [
-    { year: '2016–18', role: 'Apprenticeship', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel (Top 50 hotels globally). Built impeccable white-glove service standards and VIP guest operations at the highest level." },
-    { year: '2018–19', role: 'Chef de Rang', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
-    { year: '2019–20', role: 'VIP Guest Relations', org: 'Hotel Bristol Vienna', type: 'Hospitality', color: T.gold, body: 'Leading five-star Starwood property. Refined white-glove protocols, senior executive hospitality, personalized bespoke service at scale.' },
-    { year: '2020–21', role: 'VIP Matchday Operations', org: 'Allianz Arena München', type: 'Hospitality', color: T.gold, body: "Premium matchday VIP operations at one of Europe's most iconic sports venues — serving executives, sponsors, and high-profile clients." },
-    { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', type: 'Finance', color: '#7ab4d4', body: "Austria's largest broker with €8B AUM. Brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments." },
-    { year: '2022–23', role: 'Social Media Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led social media, community growth, and event programming in the early Web3 space, scaling developer and founder engagement through content and curated in-person experiences.' },
-    { year: '2023–Now', role: 'Global Events', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Supported StarknetCC and conference booth management, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
+    { year: '2016–18', role: 'Apprenticeship', org: 'Hotel Sacher Wien', logo: `${IMG}/logo-sacher.png`, type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel (Top 50 hotels globally). Built impeccable white-glove service standards and VIP guest operations at the highest level." },
+    { year: '2018–19', role: 'Chef de Rang', org: 'DO&CO', logo: `${IMG}/logo-doco.png`, type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
+    { year: '2019–20', role: 'VIP Guest Relations', org: 'Hotel Bristol Vienna', logo: `${IMG}/logo-bristol.png`, type: 'Hospitality', color: T.gold, body: 'Leading five-star Starwood property. Refined white-glove protocols, senior executive hospitality, personalized bespoke service at scale.' },
+    { year: '2020–21', role: 'VIP Matchday Operations', org: 'Allianz Arena München', logo: `${IMG}/logo-allianz.png`, type: 'Hospitality', color: T.gold, body: "Premium matchday VIP operations at one of Europe's most iconic sports venues — serving executives, sponsors, and high-profile clients." },
+    { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', logo: `${IMG}/logo-bnp.png`, type: 'Finance', color: '#7ab4d4', body: "Austria's largest broker with €8B AUM. Brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments." },
+    { year: '2022–23', role: 'Social Media Lead', org: 'LFG Labs', logo: `${IMG}/logo-lfg.png`, type: 'Web3', color: '#9a7ae0', body: 'Led social media, community growth, and event programming in the early Web3 space, scaling developer and founder engagement through content and curated in-person experiences.' },
+    { year: '2023–Now', role: 'Global Events', org: 'Starknet Foundation', logo: `${IMG}/logo-starknet.png`, type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Supported StarknetCC and conference booth management, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
   ];
 
   const activeEvent = events.find(e => e.id === activeId);
@@ -647,7 +647,14 @@ export default function Portfolio() {
                         <span style={{ color: T.stone, fontSize: '10px' }}>· {item.year}</span>
                       </div>
                       <h3 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '5px' }}>{item.role}</h3>
-                      <p style={{ color: T.gold, fontSize: '12px', marginBottom: '11px', fontWeight: 500 }}>{item.org}</p>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '9px', marginBottom: '11px' }}>
+                        {item.logo && (
+                          <div style={{ width: '26px', height: '26px', borderRadius: '6px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, padding: '3px', overflow: 'hidden' }}>
+                            <img src={item.logo} alt={item.org} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+                          </div>
+                        )}
+                        <p style={{ color: T.gold, fontSize: '12px', fontWeight: 500 }}>{item.org}</p>
+                      </div>
                       <p style={{ color: T.stone, fontSize: '12.5px', lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
                     </div>
                   </div>
