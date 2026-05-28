@@ -309,7 +309,10 @@ export default function Portfolio() {
       description: 'Seven-day flagship activation during Devcon week in Bangkok. Hacker House, developer workshops, VIP dinners, community parties, yoga & sport experiences, and a full hacker lounge — drawing 10,000+ attendees from the global ETH and Starknet ecosystem.',
       photos: [`${IMG}/bangkok-entrance.jpg`, `${IMG}/bangkok-tunnel.jpg`, `${IMG}/bangkok-lobby.jpg`, `${IMG}/bangkok-cafe.jpg`, `${IMG}/bangkok-team.jpg`, `${IMG}/hackerhouse-bkk.jpg`],
       youtube: [{ id: 'kTbc6aMQWRM', label: 'Bangkok Hacker House — Official Recap' }],
-      twitter: [{ url: 'https://twitter.com/_SDAV/status/1856586241858269497', label: 'Yoga Event (Community)' }],
+      twitter: [
+        { url: 'https://twitter.com/_SDAV/status/1854149594629673256', label: 'Stark Space Bangkok (Community)' },
+        { url: 'https://twitter.com/_SDAV/status/1856586241858269497', label: 'Yoga Event (Community)' },
+      ],
       accent: '#9060e0', icon: '⬡',
     },
     {
@@ -409,7 +412,7 @@ export default function Portfolio() {
     { end: 200, prefix: '', suffix: '+', label: 'Developers\nOnboarded' },
     { end: 40, prefix: '', suffix: '+', label: 'Communities &\nMeetups Scaled' },
     { end: 32, prefix: '', suffix: '+', label: 'Side Events\nProduced' },
-    { end: 100, prefix: '', suffix: '+', label: 'Speakers &\nFounders' },
+    { end: 150, prefix: '', suffix: '+', label: 'Speakers &\nFounders' },
     { end: 15000, prefix: '', suffix: '+', label: 'Branded Assets\nDelivered' },
     { end: 10, prefix: '', suffix: '+', label: 'Intl Conferences\n(Devcon · EthCC · Token2049)' },
   ];
@@ -429,12 +432,12 @@ export default function Portfolio() {
 
   const timeline = [
     { year: '2016–18', role: 'Apprenticeship', org: 'Hotel Sacher Wien', type: 'Hospitality', color: T.gold, body: "Vienna's most iconic five-star hotel (Top 50 hotels globally). Built impeccable white-glove service standards and VIP guest operations at the highest level." },
-    { year: '2018–19', role: 'Premium Events & Luxury Catering', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
+    { year: '2018–19', role: 'Chef de Rang', org: 'DO&CO', type: 'Hospitality', color: T.gold, body: 'International luxury hospitality and event catering group. High-profile events, elite service delivery, consistently elevated brand touchpoints.' },
     { year: '2019–20', role: 'VIP Guest Relations', org: 'Hotel Bristol Vienna', type: 'Hospitality', color: T.gold, body: 'Leading five-star Starwood property. Refined white-glove protocols, senior executive hospitality, personalized bespoke service at scale.' },
     { year: '2020–21', role: 'VIP Matchday Operations', org: 'Allianz Arena München', type: 'Hospitality', color: T.gold, body: "Premium matchday VIP operations at one of Europe's most iconic sports venues — serving executives, sponsors, and high-profile clients." },
     { year: '2021–22', role: 'Multi-Asset Broker / Trader', org: 'BNP Paribas', type: 'Finance', color: '#7ab4d4', body: "Austria's largest broker with €8B AUM. Brokerage across equities, fixed income, and derivatives. High-stakes analytical decision-making in volatile market environments." },
     { year: '2022–23', role: 'Social Media Lead', org: 'LFG Labs', type: 'Web3', color: '#9a7ae0', body: 'Led social media, community growth, and event programming in the early Web3 space, scaling developer and founder engagement through content and curated in-person experiences.' },
-    { year: '2023–25', role: 'Global Events', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Supported StarknetCC and conference booth management, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
+    { year: '2023–Now', role: 'Global Events', org: 'Starknet Foundation', type: 'Web3', color: '#9a7ae0', body: 'Co-led flagship Hacker House program across 6 countries. Supported StarknetCC and conference booth management, Devcon activations, VIP events, and a global meetup network across 30+ cities and 5 continents.' },
   ];
 
   const activeEvent = events.find(e => e.id === activeId);
@@ -585,6 +588,9 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
+          <p style={{ color: 'rgba(184,176,164,0.4)', fontSize: '9px', letterSpacing: '0.5px', textAlign: 'center', marginTop: '20px', fontWeight: 300 }}>
+            Some photos sourced from community members and public online posts.
+          </p>
         </div>
       </section>
 
