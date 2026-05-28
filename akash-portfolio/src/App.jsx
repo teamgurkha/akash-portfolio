@@ -409,7 +409,7 @@ export default function Portfolio() {
     { end: 200, prefix: '', suffix: '+', label: 'Developers\nOnboarded' },
     { end: 40, prefix: '', suffix: '+', label: 'Communities &\nMeetups Scaled' },
     { end: 32, prefix: '', suffix: '+', label: 'Side Events\nProduced' },
-    { end: 500, prefix: '', suffix: '+', label: 'Speakers &\nFounders' },
+    { end: 100, prefix: '', suffix: '+', label: 'Speakers &\nFounders' },
     { end: 15000, prefix: '', suffix: '+', label: 'Branded Assets\nDelivered' },
     { end: 10, prefix: '', suffix: '+', label: 'Intl Conferences\n(Devcon · EthCC · Token2049)' },
   ];
