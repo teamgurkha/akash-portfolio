@@ -235,6 +235,7 @@ export default function Portfolio() {
       @media (max-width: 860px) {
         .d-none { display: none !important; }
         .hero-wrap { flex-direction: column !important; gap: 36px !important; }
+        .hero-photo-inner { width: clamp(260px, 75vw, 380px) !important; height: clamp(320px, 92vw, 460px) !important; }
         .ev-grid { grid-template-columns: 1fr !important; }
         .ev-wide { grid-column: span 1 !important; }
       }
@@ -480,8 +481,8 @@ export default function Portfolio() {
               <button className="btn-out" onClick={() => goto('contact')} style={{ padding: '15px 36px', borderRadius: '3px', color: T.text, fontSize: '11px', letterSpacing: '2.2px', textTransform: 'uppercase', fontWeight: 400 }}>Get In Touch</button>
             </div>
           </div>
-          <div className="d-none" style={{ flexShrink: 0, animation: 'heroIn .85s .22s ease both', position: 'relative' }}>
-            <div style={{ width: 'clamp(300px,28vw,420px)', height: 'clamp(360px,33vw,500px)', borderRadius: '12px', overflow: 'hidden', border: '1.5px solid rgba(196,160,100,.28)', boxShadow: '0 0 0 8px rgba(196,160,100,.04), 0 30px 80px rgba(0,0,0,.7), 0 0 60px rgba(196,160,100,.1)', position: 'relative', zIndex: 2, background: '#0d0d0d' }}>
+          <div className="hero-photo" style={{ flexShrink: 0, animation: 'heroIn .85s .22s ease both', position: 'relative' }}>
+            <div className="hero-photo-inner" style={{ width: 'clamp(300px,28vw,420px)', height: 'clamp(360px,33vw,500px)', borderRadius: '12px', overflow: 'hidden', border: '1.5px solid rgba(196,160,100,.28)', boxShadow: '0 0 0 8px rgba(196,160,100,.04), 0 30px 80px rgba(0,0,0,.7), 0 0 60px rgba(196,160,100,.1)', position: 'relative', zIndex: 2, background: '#0d0d0d' }}>
               <img src={`${IMG}/sofa.jpg`} alt="Akash Schweiger" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '60%', background: 'linear-gradient(to top, rgba(6,6,6,.85), transparent)', pointerEvents: 'none' }} />
               <div style={{ position: 'absolute', bottom: '20px', left: '20px', right: '20px' }}>
