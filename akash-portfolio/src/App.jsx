@@ -238,6 +238,10 @@ export default function Portfolio() {
         .hero-photo-inner { width: clamp(260px, 75vw, 380px) !important; height: clamp(320px, 92vw, 460px) !important; }
         .ev-grid { grid-template-columns: 1fr !important; }
         .ev-wide { grid-column: span 1 !important; }
+        .ev-card { height: 340px !important; }
+        .ev-card h3 { font-size: 20px !important; }
+        .ev-card .ev-meta { font-size: 11.5px !important; line-height: 1.5 !important; }
+        .ev-card .ev-tag { font-size: 9.5px !important; }
       }
     `;
     document.head.appendChild(style);
@@ -563,10 +567,10 @@ export default function Portfolio() {
                   </div>
                   <div style={{ position: 'relative', padding: '22px' }}>
                     <div style={{ display: 'inline-block', background: `${ev.accent}16`, border: `1px solid ${ev.accent}2e`, borderRadius: '20px', padding: '4px 13px', marginBottom: '11px' }}>
-                      <span style={{ color: ev.accent, fontSize: '9px', letterSpacing: '1.5px', textTransform: 'uppercase', fontWeight: 600 }}>{ev.tag}</span>
+                      <span className="ev-tag" style={{ color: ev.accent, fontSize: '9px', letterSpacing: '1.5px', textTransform: 'uppercase', fontWeight: 600 }}>{ev.tag}</span>
                     </div>
                     <h3 style={{ fontSize: ev.wide ? '24px' : '19px', fontWeight: 700, marginBottom: '7px', lineHeight: 1.15 }}>{ev.title}</h3>
-                    <p style={{ color: T.stone, fontSize: '12px' }}>{ev.meta}</p>
+                    <p className="ev-meta" style={{ color: T.stone, fontSize: '12px' }}>{ev.meta}</p>
                   </div>
                 </div>
               </Reveal>
@@ -669,6 +673,9 @@ export default function Portfolio() {
       <section id="contact" style={{ ...sP, position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: '740px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
           <Reveal>
+            <div style={{ width: '100%', maxWidth: '560px', margin: '0 auto 40px', borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(196,160,100,.22)', boxShadow: '0 20px 60px rgba(0,0,0,.5), 0 0 40px rgba(196,160,100,.08)', aspectRatio: '4 / 3', background: '#0d0d0d' }}>
+              <img src={`${IMG}/TALKING.JPG`} alt="Akash speaking at a Starknet event" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.parentElement.style.display = 'none'; }} />
+            </div>
             <div style={{ width: '50px', height: '1px', background: T.gold, margin: '0 auto 38px' }} />
             <p style={sLabel}>Let's Connect</p>
           </Reveal>
