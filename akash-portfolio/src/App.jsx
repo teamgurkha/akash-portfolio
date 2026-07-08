@@ -411,7 +411,7 @@ export default function Portfolio() {
   ];
 
   const metrics = [
-    { end: 4, prefix: '$', suffix: 'M+', label: 'Event Budget\nManaged' },
+    { end: 1, prefix: '$', suffix: 'M+', label: 'Event Budget\nManaged' },
     { end: 10000, prefix: '', suffix: '+', label: 'Attendees\nEngaged' },
     { end: 5, prefix: '', suffix: '', label: 'Continents\nReached' },
     { end: 200, prefix: '', suffix: '+', label: 'Developers\nOnboarded' },
